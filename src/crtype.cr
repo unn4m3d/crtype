@@ -21,9 +21,7 @@ module CrType
       T
     end
 
-    def cast(obj)
-      T.cast(obj)
-    end
+    delegate name,to_s,inspect,cast, to: inner_type
 
     def box(obj)
       Box(T).box obj
