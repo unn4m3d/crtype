@@ -23,9 +23,10 @@ require "crtype"
 
 types = Array(CrType::AbstractType).new
 
-types.push CrType::Type(Int16).new
-types.push CrType::Type(Int32).new
-types.push CrType::Type(Int64).new
+types.push CrType::Type(UInt8).new
+types.push CrType::Type(UInt16).new
+types.push CrType::Type(UInt32).new
+types.push CrType::Type(UInt64).new
 
 types.each{|e| puts e.inner_type.name}
 
